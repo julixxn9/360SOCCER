@@ -29,7 +29,7 @@ function App() {
                 <main className="contenido">
                     <Routes> {/* Aquí se definen las rutas de la aplicación */}
                     {/* Route es para definir una ruta(URL) que va a mostar un componente*/}
-                        <Route path="/360SOCCER" element={<Equipos/>}/> {/* Ruta de equipos */}
+                        <Route path="/" element={<Equipos/>}/> {/* Ruta de equipos */}
                         <Route path="/equipos" element={<Equipos/>}/> Ruta de equipos
                         <Route path="/partidos" element ={<Partidos/>}/> {/* Ruta de partidos */}
                         {/*Para rutas que no existe se puede usar el * para puedas darle un mensaje a una ruta inexistente*/}
