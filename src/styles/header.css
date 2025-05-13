@@ -1,0 +1,72 @@
+@import "./variables.css";
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fondoSegundarioA);
+}
+
+.header-izq{
+    display: flex;
+    align-items: center;
+    gap: 5vh;
+}
+
+.header-der, .header-izq{
+    padding: 2rem 0 2rem 0;
+}
+
+.header-navegacion ul {
+    display: flex;
+    gap: 2vh;
+}
+
+.header-izq h1 {
+    padding: 0 0 0 .5rem;
+}
+
+.header-navegacion ul a, .header-der h3 a{
+    color: var(--textoA);
+    position: relative;
+    padding-bottom: 2px; 
+}
+
+/* Línea animada debajo del texto */
+.header-navegacion ul a::after, .header-der h3 a::after {
+    content: "";
+    /* content es una propiedad CSS que permite agregar contenido a un elemento */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--textoA); /* Mismo color del texto */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Cuando pasas el cursor, la línea se extiende */
+.header-navegacion ul a:hover::after, .header-der h3 a:hover::after {
+    width: 100%;
+}
+
+.header-der{
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem 0 .5rem;
+    gap: 4vh;
+}
+
+.header-der i {
+    max-width: min-content;
+    font-size: 5vh;
+    color: var(--textoA);
+    transition: .5s ease-in-out;
+}
+
+.header-der i:hover {
+    text-shadow: white 0px 0px 1.5vh;
+}
+
+
+
